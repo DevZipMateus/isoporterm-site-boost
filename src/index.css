@@ -26,15 +26,15 @@
 
     /* Secondary System */
     --secondary: 220 14% 96%;
-    --secondary-foreground: 220 9% 46%;
+    --secondary-foreground: 220 9% 30%;
 
-    /* Muted System */
+    /* Muted System - Melhorado para melhor contraste */
     --muted: 220 14% 96%;
-    --muted-foreground: 220 9% 46%;
+    --muted-foreground: 220 13% 35%;
 
-    /* Accent - Azul mais claro */
-    --accent: 217 91% 60%;
-    --accent-foreground: 0 0% 100%;
+    /* Accent - Cor mais clara para melhor contraste */
+    --accent: 217 91% 70%;
+    --accent-foreground: 222.2 84% 4.9%;
 
     /* Destructive */
     --destructive: 0 84% 60%;
@@ -62,7 +62,8 @@
     --hero-gradient-from: 219 89% 35%;
     --hero-gradient-to: 217 91% 60%;
     --section-bg: 220 14% 98%;
-    --text-muted: 220 9% 46%;
+    --text-muted: 220 13% 35%;
+    --hero-text-light: 0 0% 95%;
   }
 
   .dark {
@@ -165,9 +166,9 @@
     50% { transform: translateY(-20px); }
   }
 
-  /* Button Variants */
+  /* Button Variants - Melhorados para contraste */
   .btn-hero {
-    @apply bg-white/10 text-white border border-white/60 backdrop-blur-sm hover:bg-accent hover:text-accent-foreground hover:border-accent transition-all duration-300;
+    @apply bg-white/20 text-white border-2 border-white/80 backdrop-blur-sm hover:bg-white hover:text-primary hover:border-white transition-all duration-300 shadow-lg;
   }
 
   .btn-primary {
@@ -175,19 +176,19 @@
   }
 
   .btn-outline {
-    @apply bg-transparent text-primary border border-primary/60 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300;
+    @apply bg-transparent text-primary border-2 border-primary hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300;
   }
 
   /* Card Styles */
   .service-card {
-    @apply bg-card/80 backdrop-blur-sm border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300;
+    @apply bg-card/90 backdrop-blur-sm border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300;
   }
 
   .testimonial-card {
-    @apply bg-white/90 backdrop-blur-sm border border-border/30 hover:shadow-md transition-all duration-300;
+    @apply bg-white/95 backdrop-blur-sm border border-border/30 hover:shadow-md transition-all duration-300;
   }
 
-  /* Typography */
+  /* Typography - Melhorada para contraste */
   .heading-xl {
     @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight;
   }
@@ -201,10 +202,12 @@
   }
 
   .text-hero {
-    @apply text-lg md:text-xl text-white/90 leading-relaxed;
+    @apply text-lg md:text-xl leading-relaxed;
+    color: hsl(var(--hero-text-light));
   }
 
   .text-muted {
-    @apply text-muted-foreground leading-relaxed;
+    color: hsl(var(--text-muted));
+    @apply leading-relaxed;
   }
 }

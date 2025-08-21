@@ -21,7 +21,7 @@ const Hero = () => {
           <div className="animate-fade-in">
             <h1 className="heading-xl mb-6">
               Soluções Inovadoras em
-              <span className="block text-accent"> EPS Poliestireno</span>
+              <span className="block text-white"> EPS Poliestireno</span>
             </h1>
             
             <p className="text-hero mb-8 max-w-2xl mx-auto">
@@ -45,7 +45,7 @@ const Hero = () => {
                 variant="outline"
                 size="lg"
                 onClick={() => scrollToSection('#servicos')}
-                className="bg-white/10 text-white border-white/60 hover:bg-white hover:text-primary text-lg px-8 py-6"
+                className="bg-white/20 text-white border-2 border-white/80 hover:bg-white hover:text-primary text-lg px-8 py-6 backdrop-blur-sm"
               >
                 Nossos Serviços
               </Button>
@@ -55,27 +55,27 @@ const Hero = () => {
           {/* Stats/Features */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 animate-slide-up">
             <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl mb-4">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl mb-4 border border-white/30">
                 <Shield className="h-8 w-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Qualidade Garantida</h3>
-              <p className="text-white/80">Materiais de alta qualidade e durabilidade</p>
+              <h3 className="text-xl font-semibold mb-2 text-white">Qualidade Garantida</h3>
+              <p className="text-white/90">Materiais de alta qualidade e durabilidade</p>
             </div>
             
             <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl mb-4">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl mb-4 border border-white/30">
                 <Award className="h-8 w-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Experiência</h3>
-              <p className="text-white/80">Anos de experiência no mercado de EPS</p>
+              <h3 className="text-xl font-semibold mb-2 text-white">Experiência</h3>
+              <p className="text-white/90">Anos de experiência no mercado de EPS</p>
             </div>
             
             <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl mb-4">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl mb-4 border border-white/30">
                 <Users className="h-8 w-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Atendimento</h3>
-              <p className="text-white/80">Suporte especializado e personalizado</p>
+              <h3 className="text-xl font-semibold mb-2 text-white">Atendimento</h3>
+              <p className="text-white/90">Suporte especializado e personalizado</p>
             </div>
           </div>
         </div>
@@ -83,8 +83,8 @@ const Hero = () => {
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white/50 rounded-full mt-2 animate-pulse"></div>
+        <div className="w-6 h-10 border-2 border-white/80 rounded-full flex justify-center bg-white/10 backdrop-blur-sm">
+          <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
         </div>
       </div>
     </section>

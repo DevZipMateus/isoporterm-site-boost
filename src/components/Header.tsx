@@ -58,8 +58,8 @@ const Header = () => {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-border/50'
-            : 'bg-transparent'
+            ? 'bg-white/98 backdrop-blur-md shadow-lg border-b border-border/50'
+            : 'bg-black/10 backdrop-blur-md'
         }`}
         style={{ top: isScrolled ? '0' : '40px' }}
       >
@@ -74,12 +74,12 @@ const Header = () => {
               />
               <div>
                 <h1 className={`text-xl font-bold transition-colors duration-300 ${
-                  isScrolled ? 'text-primary' : 'text-white'
+                  isScrolled ? 'text-primary' : 'text-white drop-shadow-lg'
                 }`}>
                   ISOPORTERM
                 </h1>
                 <p className={`text-sm transition-colors duration-300 ${
-                  isScrolled ? 'text-muted-foreground' : 'text-white/80'
+                  isScrolled ? 'text-muted-foreground' : 'text-white/90 drop-shadow'
                 }`}>
                   Soluções em EPS
                 </p>
@@ -92,8 +92,10 @@ const Header = () => {
                 <button
                   key={item.href}
                   onClick={() => scrollToSection(item.href)}
-                  className={`font-medium transition-colors duration-300 hover:text-accent ${
-                    isScrolled ? 'text-foreground hover:text-primary' : 'text-white hover:text-accent'
+                  className={`font-medium transition-colors duration-300 ${
+                    isScrolled 
+                      ? 'text-foreground hover:text-primary' 
+                      : 'text-white hover:text-white/80 drop-shadow-lg'
                   }`}
                 >
                   {item.label}
@@ -117,7 +119,7 @@ const Header = () => {
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className={`md:hidden p-2 transition-colors duration-300 ${
-                isScrolled ? 'text-foreground' : 'text-white'
+                isScrolled ? 'text-foreground' : 'text-white drop-shadow-lg'
               }`}
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -127,7 +129,7 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden bg-white/95 backdrop-blur-md border-t border-border/50">
+          <div className="md:hidden bg-white/98 backdrop-blur-md border-t border-border/50">
             <nav className="container mx-auto px-4 py-4 space-y-4">
               {navItems.map((item) => (
                 <button
