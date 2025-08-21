@@ -35,7 +35,7 @@ const Contact = () => {
                     <p className="text-muted-foreground">(19) 98360-5710</p>
                     <Button 
                       asChild
-                      className="btn-outline mt-2"
+                      className="bg-primary/10 text-primary border-2 border-primary/60 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 mt-2"
                     >
                       <a href="https://wa.me/5519983605710" target="_blank" rel="noopener noreferrer">
                         Conversar no WhatsApp
@@ -54,7 +54,7 @@ const Contact = () => {
                     <Button 
                       asChild
                       variant="outline"
-                      className="btn-outline mt-2"
+                      className="bg-primary/10 text-primary border-2 border-primary/60 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 mt-2"
                     >
                       <a href="mailto:isoportermvendas@gmail.com">
                         Enviar Email
@@ -98,7 +98,7 @@ const Contact = () => {
                     <Button 
                       asChild
                       variant="outline"
-                      className="btn-outline mt-2"
+                      className="bg-primary/10 text-primary border-2 border-primary/60 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 mt-2"
                     >
                       <a href="https://www.instagram.com/isoporterm/" target="_blank" rel="noopener noreferrer">
                         Seguir no Instagram
@@ -125,7 +125,7 @@ const Contact = () => {
                   <Button 
                     asChild
                     size="lg"
-                    className="btn-hero w-full text-lg"
+                    className="bg-white/20 text-white border-2 border-white/80 backdrop-blur-sm hover:bg-white hover:text-primary hover:border-white transition-all duration-300 shadow-lg w-full text-lg"
                   >
                     <a href="https://wa.me/5519983605710" target="_blank" rel="noopener noreferrer">
                       <Phone className="mr-2 h-5 w-5" />
@@ -137,7 +137,7 @@ const Contact = () => {
                     asChild
                     variant="outline"
                     size="lg"
-                    className="bg-white/10 text-white border-white/60 hover:bg-white hover:text-primary w-full text-lg"
+                    className="bg-white/20 text-white border-2 border-white/80 backdrop-blur-sm hover:bg-white hover:text-primary hover:border-white transition-all duration-300 shadow-lg w-full text-lg"
                   >
                     <a href="mailto:isoportermvendas@gmail.com">
                       <Mail className="mr-2 h-5 w-5" />

@@ -59,7 +59,7 @@ const Header = () => {
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
             ? 'bg-white/98 backdrop-blur-md shadow-lg border-b border-border/50'
-            : 'bg-black/10 backdrop-blur-md'
+            : 'bg-black/20 backdrop-blur-md'
         }`}
         style={{ top: isScrolled ? '0' : '40px' }}
       >
@@ -107,7 +107,11 @@ const Header = () => {
             <div className="hidden md:block">
               <Button
                 asChild
-                className={isScrolled ? 'btn-primary' : 'btn-hero'}
+                className={
+                  isScrolled 
+                    ? 'bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300'
+                    : 'bg-white/20 text-white border-2 border-white/80 backdrop-blur-sm hover:bg-white hover:text-primary hover:border-white transition-all duration-300 shadow-lg'
+                }
               >
                 <a href="https://wa.me/5519983605710" target="_blank" rel="noopener noreferrer">
                   Orçamento
@@ -140,7 +144,10 @@ const Header = () => {
                   {item.label}
                 </button>
               ))}
-              <Button asChild className="btn-primary w-full mt-4">
+              <Button 
+                asChild 
+                className="bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 w-full mt-4"
+              >
                 <a href="https://wa.me/5519983605710" target="_blank" rel="noopener noreferrer">
                   Solicitar Orçamento
                 </a>

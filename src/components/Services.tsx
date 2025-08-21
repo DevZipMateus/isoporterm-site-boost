@@ -115,7 +115,7 @@ const Services = () => {
               <Button 
                 asChild
                 size="lg"
-                className="btn-hero text-lg px-8 py-6"
+                className="bg-white/20 text-white border-2 border-white/80 backdrop-blur-sm hover:bg-white hover:text-primary hover:border-white transition-all duration-300 shadow-lg text-lg px-8 py-6"
               >
                 <a href="https://wa.me/5519983605710" target="_blank" rel="noopener noreferrer">
                   WhatsApp: (19) 98360-5710
@@ -125,7 +125,7 @@ const Services = () => {
                 asChild
                 variant="outline"
                 size="lg"
-                className="bg-white/10 text-white border-white/60 hover:bg-white hover:text-primary text-lg px-8 py-6"
+                className="bg-white/20 text-white border-2 border-white/80 backdrop-blur-sm hover:bg-white hover:text-primary hover:border-white transition-all duration-300 shadow-lg text-lg px-8 py-6"
               >
                 <a href="mailto:isoportermvendas@gmail.com">
                   Email: isoportermvendas@gmail.com
