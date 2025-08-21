@@ -12,7 +12,7 @@ const Contact = () => {
             <h2 className="heading-lg text-primary mb-6">
               Entre em Contato
             </h2>
-            <p className="text-lg text-muted max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-foreground/80 max-w-3xl mx-auto leading-relaxed">
               Estamos prontos para atender você e desenvolver a melhor solução 
               para seu projeto. Fale conosco através dos canais abaixo.
             </p>
@@ -32,7 +32,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">Telefone</h4>
-                    <p className="text-muted-foreground">(19) 98360-5710</p>
+                    <p className="text-foreground/70">(19) 98360-5710</p>
                     <Button 
                       asChild
                       className="bg-primary/10 text-primary border-2 border-primary/60 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 mt-2"
@@ -50,7 +50,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">Email</h4>
-                    <p className="text-muted-foreground">isoportermvendas@gmail.com</p>
+                    <p className="text-foreground/70">isoportermvendas@gmail.com</p>
                     <Button 
                       asChild
                       variant="outline"
@@ -69,7 +69,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">Endereço</h4>
-                    <p className="text-muted-foreground">
+                    <p className="text-foreground/70">
                       Rua André Bertoldi, 73<br />
                       Pq Via Norte - Campinas/SP
                     </p>
@@ -82,7 +82,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">Horário de Funcionamento</h4>
-                    <p className="text-muted-foreground">
+                    <p className="text-foreground/70">
                       Segunda a Sexta: 07:00 às 17:00
                     </p>
                   </div>
@@ -94,7 +94,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">Instagram</h4>
-                    <p className="text-muted-foreground">@isoporterm</p>
+                    <p className="text-foreground/70">@isoporterm</p>
                     <Button 
                       asChild
                       variant="outline"
@@ -125,7 +125,7 @@ const Contact = () => {
                   <Button 
                     asChild
                     size="lg"
-                    className="bg-white/20 text-white border-2 border-white/80 backdrop-blur-sm hover:bg-white hover:text-primary hover:border-white transition-all duration-300 shadow-lg w-full text-lg"
+                    className="bg-white/20 text-white border-2 border-white/60 backdrop-blur-sm hover:bg-white hover:text-primary hover:border-white transition-all duration-300 shadow-lg w-full text-lg"
                   >
                     <a href="https://wa.me/5519983605710" target="_blank" rel="noopener noreferrer">
                       <Phone className="mr-2 h-5 w-5" />
@@ -137,7 +137,7 @@ const Contact = () => {
                     asChild
                     variant="outline"
                     size="lg"
-                    className="bg-white/20 text-white border-2 border-white/80 backdrop-blur-sm hover:bg-white hover:text-primary hover:border-white transition-all duration-300 shadow-lg w-full text-lg"
+                    className="bg-white/20 text-white border-2 border-white/60 backdrop-blur-sm hover:bg-white hover:text-primary hover:border-white transition-all duration-300 shadow-lg w-full text-lg"
                   >
                     <a href="mailto:isoportermvendas@gmail.com">
                       <Mail className="mr-2 h-5 w-5" />

@@ -40,16 +40,16 @@ const Header = () => {
           <div className="flex items-center gap-4 flex-wrap">
             <div className="flex items-center gap-2">
               <Phone className="h-4 w-4" />
-              <span>(19) 98360-5710</span>
+              <span className="text-primary-foreground">(19) 98360-5710</span>
             </div>
             <div className="flex items-center gap-2">
               <Mail className="h-4 w-4" />
-              <span>isoportermvendas@gmail.com</span>
+              <span className="text-primary-foreground">isoportermvendas@gmail.com</span>
             </div>
           </div>
           <div className="flex items-center gap-2">
             <Clock className="h-4 w-4" />
-            <span>Seg-Sex: 07:00 às 17:00</span>
+            <span className="text-primary-foreground">Seg-Sex: 07:00 às 17:00</span>
           </div>
         </div>
       </div>
@@ -79,7 +79,7 @@ const Header = () => {
                   ISOPORTERM
                 </h1>
                 <p className={`text-sm transition-colors duration-300 ${
-                  isScrolled ? 'text-muted-foreground' : 'text-white/90 drop-shadow'
+                  isScrolled ? 'text-foreground/70' : 'text-white/90 drop-shadow'
                 }`}>
                   Soluções em EPS
                 </p>
@@ -110,7 +110,7 @@ const Header = () => {
                 className={
                   isScrolled 
                     ? 'bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300'
-                    : 'bg-white/20 text-white border-2 border-white/80 backdrop-blur-sm hover:bg-white hover:text-primary hover:border-white transition-all duration-300 shadow-lg'
+                    : 'bg-white/20 text-white border-2 border-white/60 backdrop-blur-sm hover:bg-white hover:text-primary hover:border-white transition-all duration-300 shadow-lg'
                 }
               >
                 <a href="https://wa.me/5519983605710" target="_blank" rel="noopener noreferrer">
