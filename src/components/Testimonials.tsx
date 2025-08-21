@@ -29,7 +29,7 @@ const Testimonials = () => {
             <h2 className="heading-lg text-primary mb-6">
               O que nossos clientes dizem
             </h2>
-            <p className="text-lg text-muted max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-foreground max-w-3xl mx-auto leading-relaxed">
               A satisfação dos nossos clientes é nossa maior recompensa. 
               Veja o que eles têm a dizer sobre nossos produtos e serviços.
             </p>
@@ -58,7 +58,7 @@ const Testimonials = () => {
                 </div>
 
                 {/* Testimonial Text */}
-                <p className="text-muted text-center mb-6 leading-relaxed italic">
+                <p className="text-foreground/80 text-center mb-6 leading-relaxed italic">
                   "{testimonial.text}"
                 </p>
 
@@ -72,7 +72,7 @@ const Testimonials = () => {
                   <h4 className="font-semibold text-foreground">
                     {testimonial.name}
                   </h4>
-                  <p className="text-sm text-muted-foreground">
+                  <p className="text-sm text-foreground/70">
                     Cliente ISOPORTERM
                   </p>
                 </div>
@@ -85,19 +85,19 @@ const Testimonials = () => {
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
               <div>
                 <div className="text-3xl font-bold text-primary mb-2">100%</div>
-                <div className="text-sm text-muted-foreground">Clientes Satisfeitos</div>
+                <div className="text-sm text-foreground/70">Clientes Satisfeitos</div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-primary mb-2">5.0</div>
-                <div className="text-sm text-muted-foreground">Avaliação Média</div>
+                <div className="text-sm text-foreground/70">Avaliação Média</div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-primary mb-2">24h</div>
-                <div className="text-sm text-muted-foreground">Tempo de Resposta</div>
+                <div className="text-sm text-foreground/70">Tempo de Resposta</div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-primary mb-2">+1000</div>
-                <div className="text-sm text-muted-foreground">Projetos Entregues</div>
+                <div className="text-sm text-foreground/70">Projetos Entregues</div>
               </div>
             </div>
           </div>

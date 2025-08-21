@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -29,11 +30,11 @@
 
     /* Muted System - Melhorado para melhor contraste */
     --muted: 220 14% 96%;
-    --muted-foreground: 220 13% 35%;
+    --muted-foreground: 220 13% 25%;
 
-    /* Accent - Cor mais clara para melhor contraste */
-    --accent: 217 91% 70%;
-    --accent-foreground: 222.2 84% 4.9%;
+    /* Accent - Cor mais escura para melhor contraste */
+    --accent: 217 91% 45%;
+    --accent-foreground: 0 0% 100%;
 
     /* Destructive */
     --destructive: 0 84% 60%;
@@ -61,7 +62,7 @@
     --hero-gradient-from: 219 89% 35%;
     --hero-gradient-to: 217 91% 60%;
     --section-bg: 220 14% 98%;
-    --text-muted: 220 13% 35%;
+    --text-muted: 220 13% 20%;
     --hero-text-light: 0 0% 95%;
   }
 

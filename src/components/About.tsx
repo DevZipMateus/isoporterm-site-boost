@@ -35,12 +35,12 @@ const About = () => {
               Sobre a ISOPORTERM
             </h2>
             <div className="max-w-3xl mx-auto">
-              <p className="text-lg text-muted leading-relaxed mb-6">
+              <p className="text-lg text-foreground leading-relaxed mb-6">
                 A ISOPORTERM é uma empresa voltada para soluções em EPS, 
                 tecnologia de ponta para várias áreas. Especializada em 
                 poliestireno expandido para construção civil.
               </p>
-              <p className="text-lg text-muted leading-relaxed">
+              <p className="text-lg text-foreground leading-relaxed">
                 As inovações do EPS Isopor® na construção civil vêm substituindo 
                 muitos materiais e otimizando os métodos construtivos no mundo todo. 
                 Destacamos inúmeros benefícios para arquitetura, engenharia e construção.
@@ -64,7 +64,7 @@ const About = () => {
                   <h3 className="text-xl font-semibold text-foreground mb-3">
                     {feature.title}
                   </h3>
-                  <p className="text-muted leading-relaxed">
+                  <p className="text-foreground/80 leading-relaxed">
                     {feature.description}
                   </p>
                 </div>
@@ -79,12 +79,12 @@ const About = () => {
                 <h3 className="heading-md text-primary mb-4">
                   Nossa Missão
                 </h3>
-                <p className="text-muted leading-relaxed mb-4">
+                <p className="text-foreground leading-relaxed mb-4">
                   Fornecer soluções inovadoras em EPS que atendam às necessidades 
                   específicas de cada projeto, priorizando qualidade, sustentabilidade 
                   e eficiência econômica.
                 </p>
-                <p className="text-muted leading-relaxed">
+                <p className="text-foreground leading-relaxed">
                   Comprometidos com a excelência no atendimento e na entrega de 
                   produtos que superem as expectativas dos nossos clientes.
                 </p>
@@ -93,19 +93,19 @@ const About = () => {
                 <div className="grid grid-cols-2 gap-4 text-center">
                   <div>
                     <div className="text-2xl font-bold text-primary mb-1">100%</div>
-                    <div className="text-sm text-muted-foreground">Qualidade</div>
+                    <div className="text-sm text-foreground/70">Qualidade</div>
                   </div>
                   <div>
                     <div className="text-2xl font-bold text-primary mb-1">24h</div>
-                    <div className="text-sm text-muted-foreground">Resposta</div>
+                    <div className="text-sm text-foreground/70">Resposta</div>
                   </div>
                   <div>
                     <div className="text-2xl font-bold text-primary mb-1">+1000</div>
-                    <div className="text-sm text-muted-foreground">Projetos</div>
+                    <div className="text-sm text-foreground/70">Projetos</div>
                   </div>
                   <div>
                     <div className="text-2xl font-bold text-primary mb-1">5★</div>
-                    <div className="text-sm text-muted-foreground">Avaliação</div>
+                    <div className="text-sm text-foreground/70">Avaliação</div>
                   </div>
                 </div>
               </div>

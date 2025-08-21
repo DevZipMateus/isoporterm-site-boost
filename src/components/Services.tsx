@@ -70,7 +70,7 @@ const Services = () => {
             <h2 className="heading-lg text-primary mb-6">
               Nossos Serviços e Produtos
             </h2>
-            <p className="text-lg text-muted max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-foreground max-w-3xl mx-auto leading-relaxed">
               Oferecemos uma linha completa de produtos em EPS para atender 
               todas as necessidades da construção civil moderna.
             </p>
@@ -94,7 +94,7 @@ const Services = () => {
                       {service.title}
                     </h3>
                   </div>
-                  <p className="text-muted leading-relaxed">
+                  <p className="text-foreground/80 leading-relaxed">
                     {service.description}
                   </p>
                 </div>
