@@ -19,12 +19,12 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto text-center text-white">
           {/* Main Content */}
           <div className="animate-fade-in">
-            <h1 className="heading-xl mb-6">
+            <h1 className="heading-xl mb-6 text-white drop-shadow-lg">
               Soluções Inovadoras em
-              <span className="block text-white"> EPS Poliestireno</span>
+              <span className="block text-white drop-shadow-lg"> EPS Poliestireno</span>
             </h1>
             
-            <p className="text-hero mb-8 max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl leading-relaxed mb-8 max-w-2xl mx-auto text-white/95 drop-shadow">
               A flexibilidade e praticidade do poliestireno expandido (EPS) possibilitam 
               projetos cada vez mais inovadores, econômicos e sustentáveis para a construção civil.
             </p>
@@ -58,24 +58,24 @@ const Hero = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl mb-4 border border-white/30">
                 <Shield className="h-8 w-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-white">Qualidade Garantida</h3>
-              <p className="text-white/90">Materiais de alta qualidade e durabilidade</p>
+              <h3 className="text-xl font-semibold mb-2 text-white drop-shadow">Qualidade Garantida</h3>
+              <p className="text-white/95 drop-shadow">Materiais de alta qualidade e durabilidade</p>
             </div>
             
             <div className="text-center">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl mb-4 border border-white/30">
                 <Award className="h-8 w-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-white">Experiência</h3>
-              <p className="text-white/90">Anos de experiência no mercado de EPS</p>
+              <h3 className="text-xl font-semibold mb-2 text-white drop-shadow">Experiência</h3>
+              <p className="text-white/95 drop-shadow">Anos de experiência no mercado de EPS</p>
             </div>
             
             <div className="text-center">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl mb-4 border border-white/30">
                 <Users className="h-8 w-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-white">Atendimento</h3>
-              <p className="text-white/90">Suporte especializado e personalizado</p>
+              <h3 className="text-xl font-semibold mb-2 text-white drop-shadow">Atendimento</h3>
+              <p className="text-white/95 drop-shadow">Suporte especializado e personalizado</p>
             </div>
           </div>
         </div>
