@@ -15,7 +15,7 @@ const Hero = () => {
       id="inicio" 
       className="relative min-h-screen flex items-center bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage: `url('/lovable-uploads/0d86829c-b0a1-49bf-8dcf-cff66127af92.png')`
+        backgroundImage: `url('/lovable-uploads/8256bb93-6224-4c56-9fdd-f46011888cbf.png')`
       }}
     >
       {/* Dark overlay for better text readability */}
