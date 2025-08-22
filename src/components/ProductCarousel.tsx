@@ -57,7 +57,7 @@ const ProductCarousel = () => {
   ];
 
   const plugin = React.useRef(
-    Autoplay({ delay: 3000, stopOnInteraction: true })
+    Autoplay({ delay: 3000, stopOnInteraction: false })
   );
 
   React.useEffect(() => {
@@ -77,7 +77,7 @@ const ProductCarousel = () => {
     if (isDialogOpen) {
       plugin.current.stop();
     } else {
-      plugin.current.reset();
+      plugin.current.play();
     }
   }, [isDialogOpen]);
 
@@ -98,8 +98,12 @@ const ProductCarousel = () => {
           plugins={[plugin.current]}
           className="w-full max-w-6xl mx-auto"
           setApi={setApi}
-          onMouseEnter={plugin.current.stop}
-          onMouseLeave={() => !isDialogOpen && plugin.current.reset()}
+          onMouseEnter={() => plugin.current.stop()}
+          onMouseLeave={() => {
+            if (!isDialogOpen) {
+              plugin.current.play();
+            }
+          }}
           opts={{
             align: "start",
             loop: true,
