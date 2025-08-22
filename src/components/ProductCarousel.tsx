@@ -74,12 +74,27 @@ const ProductCarousel = () => {
 
   // Controla o autoplay baseado no estado do dialog
   React.useEffect(() => {
+    if (!api) return;
+
     if (isDialogOpen) {
-      plugin.current.stop();
+      plugin.current?.stop?.();
     } else {
-      plugin.current.play();
+      // Use reset instead of play to restart the autoplay properly
+      plugin.current?.reset?.();
     }
-  }, [isDialogOpen]);
+  }, [isDialogOpen, api]);
+
+  const handleMouseEnter = () => {
+    if (api && plugin.current?.stop) {
+      plugin.current.stop();
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (api && !isDialogOpen && plugin.current?.reset) {
+      plugin.current.reset();
+    }
+  };
 
   return (
     <section className="py-16 bg-gradient-to-b from-white to-gray-50">
@@ -98,12 +113,8 @@ const ProductCarousel = () => {
           plugins={[plugin.current]}
           className="w-full max-w-6xl mx-auto"
           setApi={setApi}
-          onMouseEnter={() => plugin.current.stop()}
-          onMouseLeave={() => {
-            if (!isDialogOpen) {
-              plugin.current.play();
-            }
-          }}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
           opts={{
             align: "start",
             loop: true,
