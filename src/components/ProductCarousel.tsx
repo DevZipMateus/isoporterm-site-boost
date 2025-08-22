@@ -9,11 +9,13 @@ import {
   CarouselPrevious,
   CarouselApi,
 } from "@/components/ui/carousel";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import Autoplay from "embla-carousel-autoplay";
 
 const ProductCarousel = () => {
   const [api, setApi] = React.useState<CarouselApi>();
   const [current, setCurrent] = React.useState(0);
+  const [isDialogOpen, setIsDialogOpen] = React.useState(false);
 
   const images = [
     {
@@ -70,6 +72,15 @@ const ProductCarousel = () => {
     });
   }, [api]);
 
+  // Controla o autoplay baseado no estado do dialog
+  React.useEffect(() => {
+    if (isDialogOpen) {
+      plugin.current.stop();
+    } else {
+      plugin.current.reset();
+    }
+  }, [isDialogOpen]);
+
   return (
     <section className="py-16 bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4">
@@ -88,7 +99,7 @@ const ProductCarousel = () => {
           className="w-full max-w-6xl mx-auto"
           setApi={setApi}
           onMouseEnter={plugin.current.stop}
-          onMouseLeave={plugin.current.reset}
+          onMouseLeave={() => !isDialogOpen && plugin.current.reset()}
           opts={{
             align: "start",
             loop: true,
@@ -101,17 +112,35 @@ const ProductCarousel = () => {
                 className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3"
               >
                 <div className="p-1">
-                  <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <CardContent className="p-0">
-                      <div className="aspect-square overflow-hidden rounded-lg">
+                  <Dialog onOpenChange={setIsDialogOpen}>
+                    <DialogTrigger asChild>
+                      <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                        <CardContent className="p-0">
+                          <div className="aspect-square overflow-hidden rounded-lg">
+                            <img
+                              src={image.src}
+                              alt={image.alt}
+                              className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                            />
+                          </div>
+                        </CardContent>
+                      </Card>
+                    </DialogTrigger>
+                    <DialogContent className="max-w-4xl max-h-[90vh] p-0">
+                      <div className="relative">
                         <img
                           src={image.src}
                           alt={image.alt}
-                          className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                          className="w-full h-auto max-h-[80vh] object-contain"
                         />
+                        <div className="p-4 bg-white">
+                          <h3 className="text-lg font-semibold text-gray-900">
+                            {image.alt}
+                          </h3>
+                        </div>
                       </div>
-                    </CardContent>
-                  </Card>
+                    </DialogContent>
+                  </Dialog>
                 </div>
               </CarouselItem>
             ))}
