@@ -76,23 +76,43 @@ const ProductCarousel = () => {
   React.useEffect(() => {
     if (!api) return;
 
-    if (isDialogOpen) {
-      plugin.current?.stop?.();
-    } else {
-      // Use reset instead of play to restart the autoplay properly
-      plugin.current?.reset?.();
-    }
+    // Wait for the next tick to ensure the plugin is properly initialized
+    const timer = setTimeout(() => {
+      if (isDialogOpen) {
+        try {
+          plugin.current?.stop?.();
+        } catch (error) {
+          console.log("Error stopping autoplay:", error);
+        }
+      } else {
+        try {
+          plugin.current?.reset?.();
+        } catch (error) {
+          console.log("Error resetting autoplay:", error);
+        }
+      }
+    }, 0);
+
+    return () => clearTimeout(timer);
   }, [isDialogOpen, api]);
 
   const handleMouseEnter = () => {
-    if (api && plugin.current?.stop) {
-      plugin.current.stop();
+    if (api) {
+      try {
+        plugin.current?.stop?.();
+      } catch (error) {
+        console.log("Error stopping autoplay on hover:", error);
+      }
     }
   };
 
   const handleMouseLeave = () => {
-    if (api && !isDialogOpen && plugin.current?.reset) {
-      plugin.current.reset();
+    if (api && !isDialogOpen) {
+      try {
+        plugin.current?.reset?.();
+      } catch (error) {
+        console.log("Error resetting autoplay on leave:", error);
+      }
     }
   };
 
