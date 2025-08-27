@@ -1,5 +1,4 @@
 
-import { MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const WhatsAppFloat = () => {
@@ -16,7 +15,11 @@ const WhatsAppFloat = () => {
           rel="noopener noreferrer"
           aria-label="Conversar no WhatsApp"
         >
-          <MessageCircle className="h-7 w-7" />
+          <img 
+            src="/lovable-uploads/2a5f8023-86fc-4e30-ae37-dd1a02189419.png" 
+            alt="WhatsApp" 
+            className="h-8 w-8"
+          />
         </a>
       </Button>
     </div>
