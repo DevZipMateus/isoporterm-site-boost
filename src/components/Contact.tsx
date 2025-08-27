@@ -27,15 +27,16 @@ const Contact = () => {
               
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <div className="bg-primary/10 rounded-xl p-3">
+                  <div className="bg-primary/10 rounded-xl p-3 flex-shrink-0">
                     <Phone className="h-6 w-6 text-primary" />
                   </div>
-                  <div>
+                  <div className="min-w-0 flex-1">
                     <h4 className="font-semibold text-foreground mb-1">Telefone</h4>
                     <p className="text-foreground/70">(19) 98360-5710</p>
                     <Button 
                       asChild
-                      className="bg-primary/10 text-primary border-2 border-primary/60 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 mt-2"
+                      size="sm"
+                      className="bg-primary/10 text-primary border-2 border-primary/60 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 mt-2 text-xs sm:text-sm px-3 py-2 min-h-[36px] w-full sm:w-auto"
                     >
                       <a href="https://wa.me/5519983605710" target="_blank" rel="noopener noreferrer">
                         Conversar no WhatsApp
@@ -45,16 +46,17 @@ const Contact = () => {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="bg-primary/10 rounded-xl p-3">
+                  <div className="bg-primary/10 rounded-xl p-3 flex-shrink-0">
                     <Mail className="h-6 w-6 text-primary" />
                   </div>
-                  <div>
+                  <div className="min-w-0 flex-1">
                     <h4 className="font-semibold text-foreground mb-1">Email</h4>
-                    <p className="text-foreground/70">isoportermvendas@gmail.com</p>
+                    <p className="text-foreground/70 break-all sm:break-normal">isoportermvendas@gmail.com</p>
                     <Button 
                       asChild
                       variant="outline"
-                      className="bg-primary/10 text-primary border-2 border-primary/60 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 mt-2"
+                      size="sm"
+                      className="bg-primary/10 text-primary border-2 border-primary/60 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 mt-2 text-xs sm:text-sm px-3 py-2 min-h-[36px] w-full sm:w-auto"
                     >
                       <a href="mailto:isoportermvendas@gmail.com">
                         Enviar Email
@@ -64,7 +66,7 @@ const Contact = () => {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="bg-primary/10 rounded-xl p-3">
+                  <div className="bg-primary/10 rounded-xl p-3 flex-shrink-0">
                     <MapPin className="h-6 w-6 text-primary" />
                   </div>
                   <div>
@@ -77,7 +79,7 @@ const Contact = () => {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="bg-primary/10 rounded-xl p-3">
+                  <div className="bg-primary/10 rounded-xl p-3 flex-shrink-0">
                     <Clock className="h-6 w-6 text-primary" />
                   </div>
                   <div>
@@ -89,16 +91,17 @@ const Contact = () => {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="bg-primary/10 rounded-xl p-3">
+                  <div className="bg-primary/10 rounded-xl p-3 flex-shrink-0">
                     <Instagram className="h-6 w-6 text-primary" />
                   </div>
-                  <div>
+                  <div className="min-w-0 flex-1">
                     <h4 className="font-semibold text-foreground mb-1">Instagram</h4>
                     <p className="text-foreground/70">@isoporterm</p>
                     <Button 
                       asChild
                       variant="outline"
-                      className="bg-primary/10 text-primary border-2 border-primary/60 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 mt-2"
+                      size="sm"
+                      className="bg-primary/10 text-primary border-2 border-primary/60 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 mt-2 text-xs sm:text-sm px-3 py-2 min-h-[36px] w-full sm:w-auto"
                     >
                       <a href="https://www.instagram.com/isoporterm/" target="_blank" rel="noopener noreferrer">
                         Seguir no Instagram
@@ -111,11 +114,11 @@ const Contact = () => {
 
             {/* CTA Card */}
             <div className="animate-slide-up" style={{ animationDelay: '0.2s' }}>
-              <div className="bg-gradient-to-br from-primary to-accent rounded-2xl p-8 text-white">
+              <div className="bg-gradient-to-br from-primary to-accent rounded-2xl p-6 sm:p-8 text-white">
                 <h3 className="heading-md mb-6">
                   Solicite seu Orçamento
                 </h3>
-                <p className="text-white/90 mb-8 leading-relaxed">
+                <p className="text-white/90 mb-8 leading-relaxed text-sm sm:text-base">
                   Precisando de soluções em EPS para seu projeto? Nossa equipe 
                   especializada está pronta para desenvolver a solução ideal para 
                   suas necessidades específicas.
@@ -125,11 +128,11 @@ const Contact = () => {
                   <Button 
                     asChild
                     size="lg"
-                    className="bg-white/20 text-white border-2 border-white/60 backdrop-blur-sm hover:bg-white hover:text-primary hover:border-white transition-all duration-300 shadow-lg w-full text-lg"
+                    className="bg-white/20 text-white border-2 border-white/60 backdrop-blur-sm hover:bg-white hover:text-primary hover:border-white transition-all duration-300 shadow-lg w-full text-sm sm:text-base lg:text-lg px-4 py-3 sm:py-4 min-h-[48px] sm:min-h-[52px]"
                   >
-                    <a href="https://wa.me/5519983605710" target="_blank" rel="noopener noreferrer">
-                      <Phone className="mr-2 h-5 w-5" />
-                      WhatsApp: (19) 98360-5710
+                    <a href="https://wa.me/5519983605710" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
+                      <Phone className="mr-2 h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0" />
+                      <span className="truncate">WhatsApp: (19) 98360-5710</span>
                     </a>
                   </Button>
                   
@@ -137,11 +140,11 @@ const Contact = () => {
                     asChild
                     variant="outline"
                     size="lg"
-                    className="bg-white/20 text-white border-2 border-white/60 backdrop-blur-sm hover:bg-white hover:text-primary hover:border-white transition-all duration-300 shadow-lg w-full text-lg"
+                    className="bg-white/20 text-white border-2 border-white/60 backdrop-blur-sm hover:bg-white hover:text-primary hover:border-white transition-all duration-300 shadow-lg w-full text-sm sm:text-base lg:text-lg px-4 py-3 sm:py-4 min-h-[48px] sm:min-h-[52px]"
                   >
-                    <a href="mailto:isoportermvendas@gmail.com">
-                      <Mail className="mr-2 h-5 w-5" />
-                      isoportermvendas@gmail.com
+                    <a href="mailto:isoportermvendas@gmail.com" className="flex items-center justify-center min-w-0">
+                      <Mail className="mr-2 h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0" />
+                      <span className="truncate">isoportermvendas@gmail.com</span>
                     </a>
                   </Button>
                 </div>

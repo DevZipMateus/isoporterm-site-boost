@@ -35,21 +35,21 @@ const Header = () => {
   return (
     <>
       {/* Top Bar */}
-      <div className="bg-primary text-primary-foreground py-2 px-4 text-sm">
-        <div className="container mx-auto flex flex-wrap items-center justify-between gap-4">
-          <div className="flex items-center gap-4 flex-wrap">
-            <div className="flex items-center gap-2">
-              <Phone className="h-4 w-4" />
-              <span className="text-primary-foreground">(19) 98360-5710</span>
+      <div className="bg-primary text-primary-foreground py-2 px-4 text-xs sm:text-sm">
+        <div className="container mx-auto flex flex-wrap items-center justify-between gap-2 sm:gap-4">
+          <div className="flex items-center gap-2 sm:gap-4 flex-wrap">
+            <div className="flex items-center gap-1 sm:gap-2">
+              <Phone className="h-3 w-3 sm:h-4 sm:w-4 flex-shrink-0" />
+              <span className="text-primary-foreground whitespace-nowrap">(19) 98360-5710</span>
             </div>
-            <div className="flex items-center gap-2">
-              <Mail className="h-4 w-4" />
-              <span className="text-primary-foreground">isoportermvendas@gmail.com</span>
+            <div className="flex items-center gap-1 sm:gap-2">
+              <Mail className="h-3 w-3 sm:h-4 sm:w-4 flex-shrink-0" />
+              <span className="text-primary-foreground truncate max-w-[180px] sm:max-w-none">isoportermvendas@gmail.com</span>
             </div>
           </div>
-          <div className="flex items-center gap-2">
-            <Clock className="h-4 w-4" />
-            <span className="text-primary-foreground">Seg-Sex: 07:00 às 17:00</span>
+          <div className="flex items-center gap-1 sm:gap-2">
+            <Clock className="h-3 w-3 sm:h-4 sm:w-4 flex-shrink-0" />
+            <span className="text-primary-foreground whitespace-nowrap text-xs sm:text-sm">Seg-Sex: 07:00 às 17:00</span>
           </div>
         </div>
       </div>
@@ -66,19 +66,19 @@ const Header = () => {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
-            <div className="flex items-center space-x-3">
+            <div className="flex items-center space-x-2 sm:space-x-3">
               <img 
                 src="/lovable-uploads/e4886997-f303-4511-9bbc-fbde8a8bd927.png" 
                 alt="ISOPORTERM Logo" 
-                className="h-10 w-10 object-contain"
+                className="h-8 w-8 sm:h-10 sm:w-10 object-contain flex-shrink-0"
               />
-              <div>
-                <h1 className={`text-xl font-bold transition-colors duration-300 ${
+              <div className="min-w-0">
+                <h1 className={`text-lg sm:text-xl font-bold transition-colors duration-300 truncate ${
                   isScrolled ? 'text-primary' : 'text-white drop-shadow-lg'
                 }`}>
                   ISOPORTERM
                 </h1>
-                <p className={`text-sm transition-colors duration-300 ${
+                <p className={`text-xs sm:text-sm transition-colors duration-300 truncate ${
                   isScrolled ? 'text-foreground/70' : 'text-white/90 drop-shadow'
                 }`}>
                   Soluções em EPS
@@ -87,12 +87,12 @@ const Header = () => {
             </div>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center space-x-8">
+            <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
               {navItems.map((item) => (
                 <button
                   key={item.href}
                   onClick={() => scrollToSection(item.href)}
-                  className={`font-medium transition-colors duration-300 ${
+                  className={`font-medium transition-colors duration-300 whitespace-nowrap ${
                     isScrolled 
                       ? 'text-foreground hover:text-primary' 
                       : 'text-white hover:text-white/80 drop-shadow-lg'
@@ -104,17 +104,19 @@ const Header = () => {
             </nav>
 
             {/* CTA Button */}
-            <div className="hidden md:block">
+            <div className="hidden sm:block">
               <Button
                 asChild
-                className={
+                size="sm"
+                className={`text-xs sm:text-sm px-3 sm:px-4 py-2 min-h-[36px] sm:min-h-[40px] whitespace-nowrap ${
                   isScrolled 
                     ? 'bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300'
                     : 'bg-white/20 text-white border-2 border-white/60 backdrop-blur-sm hover:bg-white hover:text-primary hover:border-white transition-all duration-300 shadow-lg'
-                }
+                }`}
               >
                 <a href="https://wa.me/5519983605710" target="_blank" rel="noopener noreferrer">
-                  Orçamento
+                  <span className="hidden lg:inline">Orçamento</span>
+                  <span className="lg:hidden">Contato</span>
                 </a>
               </Button>
             </div>
@@ -122,7 +124,7 @@ const Header = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className={`md:hidden p-2 transition-colors duration-300 ${
+              className={`md:hidden lg:hidden p-2 transition-colors duration-300 ${
                 isScrolled ? 'text-foreground' : 'text-white drop-shadow-lg'
               }`}
             >
@@ -133,7 +135,7 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden bg-white/98 backdrop-blur-md border-t border-border/50">
+          <div className="md:hidden lg:hidden bg-white/98 backdrop-blur-md border-t border-border/50">
             <nav className="container mx-auto px-4 py-4 space-y-4">
               {navItems.map((item) => (
                 <button
@@ -146,7 +148,7 @@ const Header = () => {
               ))}
               <Button 
                 asChild 
-                className="bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 w-full mt-4"
+                className="bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 w-full mt-4 min-h-[44px] text-sm"
               >
                 <a href="https://wa.me/5519983605710" target="_blank" rel="noopener noreferrer">
                   Solicitar Orçamento

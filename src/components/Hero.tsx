@@ -39,11 +39,11 @@ const Hero = () => {
               <Button 
                 asChild
                 size="lg"
-                className="bg-white/20 text-white border-2 border-white/80 backdrop-blur-sm hover:bg-white hover:text-primary hover:border-white transition-all duration-300 shadow-lg text-lg px-8 py-6"
+                className="bg-white/20 text-white border-2 border-white/80 backdrop-blur-sm hover:bg-white hover:text-primary hover:border-white transition-all duration-300 shadow-lg text-sm sm:text-base lg:text-lg px-4 sm:px-6 lg:px-8 py-3 sm:py-4 lg:py-6 min-h-[48px] sm:min-h-[52px] lg:min-h-[56px]"
               >
-                <a href="https://wa.me/5519983605710" target="_blank" rel="noopener noreferrer">
-                  Solicitar Orçamento
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                <a href="https://wa.me/5519983605710" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center whitespace-nowrap">
+                  <span className="truncate">Solicitar Orçamento</span>
+                  <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0" />
                 </a>
               </Button>
               
@@ -51,9 +51,9 @@ const Hero = () => {
                 variant="outline"
                 size="lg"
                 onClick={() => scrollToSection('#servicos')}
-                className="bg-white/20 text-white border-2 border-white/80 backdrop-blur-sm hover:bg-white hover:text-primary hover:border-white transition-all duration-300 shadow-lg text-lg px-8 py-6"
+                className="bg-white/20 text-white border-2 border-white/80 backdrop-blur-sm hover:bg-white hover:text-primary hover:border-white transition-all duration-300 shadow-lg text-sm sm:text-base lg:text-lg px-4 sm:px-6 lg:px-8 py-3 sm:py-4 lg:py-6 min-h-[48px] sm:min-h-[52px] lg:min-h-[56px]"
               >
-                Nossos Serviços
+                <span className="whitespace-nowrap">Nossos Serviços</span>
               </Button>
             </div>
           </div>
