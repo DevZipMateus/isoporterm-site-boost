@@ -8,7 +8,9 @@ import {
   FileText, 
   Zap, 
   Home,
-  Waves
+  Waves,
+  Frame,
+  Settings
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -58,6 +60,16 @@ const Services = () => {
       icon: Waves,
       title: 'Telha Termoacústica',
       description: 'Cobertura com isolamento térmico e acústico integrado.'
+    },
+    {
+      icon: Frame,
+      title: 'Molduras de Isopor',
+      description: 'Molduras decorativas em EPS para acabamentos arquitetônicos e design de interiores.'
+    },
+    {
+      icon: Settings,
+      title: 'Peças Técnicas',
+      description: 'Componentes especializados sob medida para aplicações técnicas específicas.'
     }
   ];
 
