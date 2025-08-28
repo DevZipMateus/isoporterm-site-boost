@@ -1,4 +1,3 @@
-
 import * as React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -53,6 +52,38 @@ const ProductCarousel = () => {
     {
       src: "/lovable-uploads/9f97c018-1489-4116-8e52-983f8d927928.png",
       alt: "Placas de EPS empilhadas"
+    },
+    {
+      src: "/lovable-uploads/4f1cb37b-4516-40cc-8009-0e04f2dadadd.png",
+      alt: "Cilindros de EPS - Peças técnicas especializadas"
+    },
+    {
+      src: "/lovable-uploads/5c254c55-affb-4cca-943b-f7736ffa02fa.png",
+      alt: "Placas de EPS em degraus - Componentes estruturais"
+    },
+    {
+      src: "/lovable-uploads/d23aac45-c228-41a5-b8dd-3e9c7734b105.png",
+      alt: "Canaleta de EPS - Perfil técnico especial"
+    },
+    {
+      src: "/lovable-uploads/562ddf26-c5fb-4bd3-83b8-b918dd677a07.png",
+      alt: "Discos de EPS em vários diâmetros - 15cm, 20cm, 25cm, 30cm"
+    },
+    {
+      src: "/lovable-uploads/4b740dfd-d5f1-4d7d-b132-a224e4074432.png",
+      alt: "Placa ondulada de EPS - Isolamento térmico especializado"
+    },
+    {
+      src: "/lovable-uploads/5797a592-6cfe-48ff-a846-d31806910212.png",
+      alt: "Blocos de EPS com medidas técnicas - 4000mm x 1200mm x 1000mm"
+    },
+    {
+      src: "/lovable-uploads/275c4779-4ae2-4276-b671-d415e3ef3e53.png",
+      alt: "Moldura decorativa de EPS - Acabamento arquitetônico"
+    },
+    {
+      src: "/lovable-uploads/a761524d-2e3f-43a6-9fd2-3028e9e1741e.png",
+      alt: "Moldura de canto em EPS - Detalhes arquitetônicos"
     }
   ];
 
@@ -125,7 +156,7 @@ const ProductCarousel = () => {
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Conheça nossa linha completa de produtos em poliestireno expandido (EPS) 
-            para construção civil e isolamento térmico.
+            para construção civil, isolamento térmico e peças técnicas especializadas.
           </p>
         </div>
 
